@@ -1,0 +1,19 @@
+#Criando um banco de dados com qas regras utf8
+
+create database meubanco
+default character set utf8
+default collate utf8_general_ci;
+--------------------------------------------------------------------------------------------------------------------------
+Criando uma tabela para o banco de dados:
+-primeiro selecionar o banco de dados com o comando USE:
+
+use meubanco; (#Esse comando ativa o banco de dados.)
+
+create table celualares(
+idcelular int not null auto_increment,
+modelo varchar (20),
+marca varchar (20),
+cor varchar (10),
+preco decimal (4,3),
+primary key (idcelular)
+)default charset=utf8;
