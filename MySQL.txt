@@ -17,3 +17,27 @@ cor varchar (10),
 preco decimal (4,3),
 primary key (idcelular)
 )default charset=utf8;
+
+
+create table aparelhos (
+id int not null auto_increment,
+modelo varchar(20),
+marca varchar(20),
+cor varchar(20),
+preco decimal (4, 3),
+ano tinyint(4),
+primary key (id)
+) default charset = utf8;
+
+--------------------------------------------------------------------------------------------------------------------------
+#ALTERANDO O TIPO PRIMITIVO:
+
+alter table amigos
+modify telefone varchar(15);  #ALTERA PARA O NOVO TIPO PRIMITIVO PARA 15.
+
+
+
+#ALTERANDO O NOME DA COLUNA:
+
+alter table amigos
+change tel telefone varchar(11);   # VAI ALTERAR DE TEL PARA TELEFONE.
