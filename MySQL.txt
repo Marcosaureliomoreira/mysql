@@ -74,3 +74,31 @@ where nacionalidade != 'Brasil' and sexo = 'F' and nascimento between '1990-01-0
 
 select count(*) from gafanhotos
 where sexo = 'F' and altura > '1.90';
+
+---------------------------------------------------------------------------------------------------------------------------
+
+EXERCÍCIOS MYSQL(Curso em Vídeo)
+
+select profissao, count(*) from gafanhotos    >>>EX01
+group by profissao
+order by count(*) desc;
+
+select sexo, count(*) from gafanhotos         >>>EX02
+where nascimento > '2005-01-01'
+group by sexo;
+
+select nascimento, sexo, count(*) from gafanhotos
+where sexo = 'F' and nascimento > '2005-01-01';
+
+select nome, nacionalidade, count(*) from gafanhotos  >>>EX03
+where nacionalidade != 'Brasil'
+group by nacionalidade
+having count(nacionalidade) > 3;
+
+select avg(altura) from gafanhotos;
+
+select altura, count(*) from gafanhotos
+where peso > 100
+group by altura
+having altura > (select avg(altura) from gafanhotos);  >>>EX04
+
