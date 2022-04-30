@@ -11,7 +11,7 @@ use meubanco; (#Esse comando ativa o banco de dados.)
 
 create table celualares(
 idcelular int not null auto_increment,
-modelo varchar (20),
+modelo varchar (20) enum,
 marca varchar (20),
 cor varchar (10),
 preco decimal (4,3),
@@ -117,4 +117,9 @@ create table gafanhoto_assiste_curso (
 
 insert into gafanhoto_assiste_curso values
 (default, '2014-03-01', '1', '2');
+--------------------------------------------------------------------------------------------------------------------------
+ATUALIZANDO TABELA:
 
+update alunos
+set nome = 'Mariana Costa'   --> mudando o nome para 'Mariana Costa', onde o idalunos(identificação única) for igual a '3'
+where idalunos = '3';
